@@ -1356,6 +1356,87 @@
 								},
 								"url": "{{host-url}}admin/getUserList"
 							},
+							"response": [
+								{
+									"id": "cc0fc699-4dfe-4604-96b2-3b8203bcd02c",
+									"name": "Get All User LIst",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"start\": 0,\r\n    \"length\": 10,\r\n    \"search\": {\r\n        // \"value\": \"7355988863\"\r\n    },\r\n    \"filter\": {\r\n        // \"role\": \"user\"\r\n    },\r\n    \"order\": [\r\n        {\r\n            \"column\": 3,\r\n            \"dir\": \"asc\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{host-url}}admin/getUserList"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.26"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 24 Jan 2025 13:01:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"User fetched successfully\",\n    \"request_id\": \"34ec563b-242c-4f99-a6cf-2d88cce72606\",\n    \"data\": {\n        \"data\": [\n            {\n                \"uid\": \"ADM000001\",\n                \"name\": \"Admin\",\n                \"email\": \"ravi.verma@ciphersquare.tech\",\n                \"mobile\": \"7355988863\",\n                \"gender\": \"MALE\",\n                \"role\": \"Admin\",\n                \"account_status\": \"ACTIVE\"\n            },\n            {\n                \"uid\": \"USR000001\",\n                \"name\": \"Ravi\",\n                \"email\": \"ravi.verma+1@ciphersquare.tech\",\n                \"mobile\": \"9876543210\",\n                \"gender\": \"MALE\",\n                \"role\": \"User\",\n                \"account_status\": \"ACTIVE\"\n            }\n        ],\n        \"recordsTotal\": 2,\n        \"recordsFiltered\": 2\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get User Detail By UID",
+							"id": "2001e98b-3ebe-4517-af84-7fee5cfb4b89",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
 							"response": []
 						}
 					],
