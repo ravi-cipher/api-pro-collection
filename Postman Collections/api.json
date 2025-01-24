@@ -1329,20 +1329,22 @@
 			"item": [
 				{
 					"name": "Manage User",
-					"item": [],
+					"item": [
+						{
+							"name": "Get All User LIst",
+							"id": "79f70c92-769d-4c24-9876-04653dd7a258",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{host-url}}getUserList"
+							},
+							"response": []
+						}
+					],
 					"id": "c46db80e-5d45-4f59-ba2b-7f2f9e8fce9a"
-				},
-				{
-					"name": "Get All User LIst",
-					"id": "79f70c92-769d-4c24-9876-04653dd7a258",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "43bb7fd0-a6f9-4342-a1db-0e03efba1e38",
