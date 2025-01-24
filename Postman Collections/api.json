@@ -1138,6 +1138,18 @@
 							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"2FA status changed successfully.\",\n    \"request_id\": \"1df62697-8985-42e1-ab13-de89ad156ea6\",\n    \"data\": []\n}"
 						}
 					]
+				},
+				{
+					"name": "Update Profile Info",
+					"id": "f4f3ff86-a280-4314-8983-3cf21862d656",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "b217907f-a6e1-4c2d-b211-85aba1cf629b"
@@ -1152,12 +1164,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiIwMzU3MzA0My00MjljLTRjYzEtYTE1Ny00YTdkMWQ1NzdiMmUiLCJ1aWQiOiJVU1IwMDAwMDEiLCJ1cnQiOiIyIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI1LTAxLTIwIDExOjQ5OjA5In0.KhnIl25_tJogzZSuJcPiwgd1AM3arAPDburrmk9qN5w"
-							}
-						},
 						"method": "POST",
 						"header": [
 							{
