@@ -1326,8 +1326,56 @@
 		},
 		{
 			"name": "Admin",
-			"item": [],
-			"id": "43bb7fd0-a6f9-4342-a1db-0e03efba1e38"
+			"item": [
+				{
+					"name": "Manage User",
+					"item": [],
+					"id": "c46db80e-5d45-4f59-ba2b-7f2f9e8fce9a"
+				},
+				{
+					"name": "Get All User LIst",
+					"id": "79f70c92-769d-4c24-9876-04653dd7a258",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "43bb7fd0-a6f9-4342-a1db-0e03efba1e38",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiI4NTI0ZWFhNC05MzRkLTQ2YTUtOTQyOC02ZTM1YTU4MzZjYjAiLCJ1aWQiOiJBRE0wMDAwMDEiLCJ1cnQiOiIxIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI1LTAxLTI0IDEzOjQ0OjI1In0.DHXD4thP_sShsmq_lmzT-1TwC-0oaxiRF2Uff3iB7q4"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a801dc89-6b93-4d8c-bbbf-eed54aa8a4d7",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b3c138b1-fa45-4912-81f2-a8779e713891",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		}
 	],
 	"auth": {
