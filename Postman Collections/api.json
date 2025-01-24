@@ -1,0 +1,1274 @@
+{
+	"info": {
+		"_postman_id": "57878c0b-d082-4ce3-b7b4-d0d10c70f1d5",
+		"name": "api-pro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login & Registration",
+			"item": [
+				{
+					"name": "User Registration",
+					"id": "3e562dab-9024-4a40-8764-53a5b285defb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ravi\",\r\n    \"email\":\"ravi.verma+1@ciphersquare.tech\",\r\n    \"mobile\":\"9876543210\",\r\n    \"gender\":\"MALE\",\r\n    \"dob\":\"2012-12-04\",\r\n    \"city\":\"goa\",\r\n    \"state\":\"goa\",\r\n    \"country\":\"India\",\r\n    \"address\":\"New Delhi , India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}userRegistration"
+					},
+					"response": [
+						{
+							"id": "07ce58c1-d63c-4622-81c8-2a76786a0534",
+							"name": "User Registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"ravi\",\r\n    \"email\":\"ravi.verma+1@ciphersquare.tech\",\r\n    \"mobile\":\"9876543210\",\r\n    \"gender\":\"MALE\",\r\n    \"dob\":\"2012-12-04\",\r\n    \"city\":\"goa\",\r\n    \"state\":\"goa\",\r\n    \"country\":\"India\",\r\n    \"address\":\"New Delhi , India\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}userRegistration"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Dec 2024 06:04:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"OTP sent successfully\",\n    \"request_id\": \"ba0fcf44-709c-4891-86a4-9292350d515e\",\n    \"data\": {\n        \"otp_reference\": \"111234364791102024\",\n        \"registration_reference\": \"REG20241231113410SJDVRV\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify Registration OTP",
+					"id": "8c7b2740-c67d-4028-841b-57f351b930f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"registration_reference\": \"REG20250102010816LWW67X\",\r\n    \"otp_reference\": \"130108472441162025\",\r\n    \"otp\": \"402653\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}verifyRegistrationOtp"
+					},
+					"response": [
+						{
+							"id": "50849460-48d6-4618-bb44-f7d64285d264",
+							"name": "Verify Registration OTP",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"registration_reference\": \"REG20250102010816LWW67X\",\r\n    \"otp_reference\": \"130108472441162025\",\r\n    \"otp\": \"402653\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}verifyRegistrationOtp"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 Jan 2025 12:05:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"User registered successfully\",\n    \"request_id\": \"92c3be0a-39fe-4ad0-aa29-4f50e0dd5c34\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"id": "0bf214bb-7dc1-49d5-8a7c-14c9d3b749a7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ravi.verma+1@ciphersquare.tech\",\r\n    \"password\":\"Ravi@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}login"
+					},
+					"response": [
+						{
+							"id": "fe98a4da-d58b-4dc1-9201-ee572dc56832",
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"7355988863\",\r\n    \"password\":\"1234560987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Nov 2024 13:26:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Logged in successfully.\",\n    \"request_id\": \"d67fce39-1b6c-4d63-b493-b0a6674043d4\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiJkNjdmY2UzOS0xYjZjLTRkNjMtYjQ5My1iMGE2Njc0MDQzZDQiLCJ1aWQiOiJBRE0wMDAwMDEiLCJ1cnQiOiIxIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI0LTExLTI3IDE4OjU2OjI1In0.Qx3EOolN1EsW1mSOBvZvsUfAp7JUxxJ5YjDo5UtGJ6I\"\n    }\n}"
+						},
+						{
+							"id": "b0253b7a-0dea-4dfc-b53a-26189f56591d",
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"ravi.verma@ciphersquare.tech\",\r\n    \"password\":\"1234560987\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Nov 2024 13:27:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Logged in successfully.\",\n    \"request_id\": \"28dc95fe-0f5c-4b6a-8b0e-76df21685fa0\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiIyOGRjOTVmZS0wZjVjLTRiNmEtOGIwZS03NmRmMjE2ODVmYTAiLCJ1aWQiOiJBRE0wMDAwMDEiLCJ1cnQiOiIxIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI0LTExLTI3IDE4OjU3OjQzIn0.oK9FlRUP4i2BFiFBVec-4TM45FS8nXWoB8WDmchTtik\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login OTP Verify",
+					"id": "cf048369-4f15-4bb4-8adf-52ca48cd4eb4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ravi.verma+1@ciphersquare.tech\",\r\n    \"otp\": \"349820\",\r\n    \"otp_reference\": \"100156665272322025\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}verifyLoginOtp"
+					},
+					"response": [
+						{
+							"id": "7bb5c994-3bdb-406e-b4eb-d1cd6f3043ad",
+							"name": "Login OTP Verify",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ravi.verma+1@ciphersquare.tech\",\r\n    \"otp\": \"349820\",\r\n    \"otp_reference\": \"100156665272322025\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}verifyLoginOtp"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 05:27:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Logged in successfully.\",\n    \"request_id\": \"ea8b9eae-f723-4e5b-a813-4405e48461c6\",\n    \"data\": {\n        \"type\": \"Bearer\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiJlYThiOWVhZS1mNzIzLTRlNWItYTgxMy00NDA1ZTQ4NDYxYzYiLCJ1aWQiOiJVU1IwMDAwMDEiLCJ1cnQiOiIyIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI1LTAxLTIxIDEwOjU3OjI4In0.0WUq87QKcAzcRziXY3TSTiC7q3e4ZRwdmB52-sP-rQ4\",\n        \"user_detail\": {\n            \"uid\": \"USR000001\",\n            \"user_name\": \"ravi\",\n            \"email\": \"ravi.verma+1@ciphersquare.tech\",\n            \"mobile\": \"9876543210\",\n            \"role_id\": \"2\",\n            \"role_name\": null\n        },\n        \"logged_in_at\": \"2025-01-21 10:57:28\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"id": "8a899ad3-1bea-496e-a901-cd5c4bc3a662",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiIxNWJmMmQ0OC02NWEzLTRkMzItOGI0Zi1lMzNmYjM4ZTlkZWYiLCJ1aWQiOiJBRE0wMDAwMDEiLCJ1cnQiOiIxIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI0LTExLTI5IDExOjE4OjM0In0.6HXE-nIZtCC14dVJiw7ebGO_FM5wy87SOU1JRYYjf3A"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{host-url}}logout"
+					},
+					"response": [
+						{
+							"id": "9423a7bb-9108-45e1-a258-f4e42e5b8f76",
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "{{host-url}}logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 06:11:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"User logged out successfully.\",\n    \"request_id\": \"c63b4fe4-f37c-4cd9-ae52-5e130bb2fa90\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Password",
+					"id": "ad1d9197-2fb0-43c4-a8c5-bb1ff2c1a358",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiIwMjRiNjgwYy05MDQzLTQxMmUtOTlhMy1jMGZkNTMxNzhiMzciLCJ1aWQiOiJVU1IwMDAwMDEiLCJ1cnQiOiIyIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI1LTAxLTIwIDExOjQwOjU2In0.mW5g6U244lvZOxRrTAp0lxbm-r57uWz9jjUExhDRBA8"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"new_password\":\"QWERTYUIO\",\r\n    \"confirm_new_password\":\"QWERTYUIO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}changePassword"
+					},
+					"response": [
+						{
+							"id": "0a15f074-c882-46fb-bd4d-98b261b5d3b6",
+							"name": "Change Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"new_password\":\"Ravi@1234\",\r\n    \"confirm_new_password\":\"Ravi@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}changePassword"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 20 Jan 2025 08:30:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Password changed successfully\",\n    \"request_id\": \"1d2e8d60-14bf-4f6b-bbed-a7b22f1e7a76\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Forget Password",
+					"id": "3fa3aa69-fabd-41a7-972a-32c57b9b24c2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ravi.verma+1@ciphersquare.tech\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}forgetPassword"
+					},
+					"response": [
+						{
+							"id": "9eb369f4-396b-4597-8f07-6bf53b6602ac",
+							"name": "Forget Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ravi.verma+1@ciphersquare.tech\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}forgetPassword"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 06:10:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"OTP sent successfully\",\n    \"request_id\": \"193dd42c-10ec-4e6a-882a-93fad9f3147b\",\n    \"data\": {\n        \"otp_reference\": \"110140499957092025\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Forget Password OTP Verify",
+					"id": "a3449e88-c71d-4b3d-a2f4-4fddd695d4a5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ravi.verma+1@ciphersquare.tech\",\r\n    \"otp\": \"147402\",\r\n    \"otp_reference\": \"120105795576592025\",\r\n    \"new_password\":\"Ravi@1234\",\r\n    \"confirm_new_password\":\"Ravi@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}verifyForgetPasswordOtp"
+					},
+					"response": [
+						{
+							"id": "76d215c9-101f-461a-999d-b69a1ea526e2",
+							"name": "Forget Password OTP Verify",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ravi.verma+1@ciphersquare.tech\",\r\n    \"otp\": \"147402\",\r\n    \"otp_reference\": \"120105795576592025\",\r\n    \"new_password\":\"Ravi@1234\",\r\n    \"confirm_new_password\":\"Ravi@1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}verifyForgetPasswordOtp"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 06:39:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Password reset successfully\",\n    \"request_id\": \"7703290c-d22c-4073-ba30-7b30588cd93f\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Google Login",
+					"id": "fda6744a-8101-407b-931f-12abe3a26dca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"id": "99b3495f-70ec-4f99-9451-4a5cf46aa32f",
+							"name": "Google Login",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{host-url}}loginWithGoogle"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 21 Jan 2025 09:49:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Request completed successfully\",\n    \"request_id\": \"3d4a932d-9308-485e-9e1e-6d3e31c89d81\",\n    \"data\": {\n        \"url\": \"https://accounts.google.com/o/oauth2/auth?client_id=775551056213-im8cldhvqfppackrod2lrp3bm1h5ogr9.apps.googleusercontent.com&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fapi%2Fv1%2FgoogleAuthCallback&scope=openid+profile+email&response_type=code\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "1101ccc9-cd74-4e36-9d94-9ebc413c3a22"
+		},
+		{
+			"name": "User Detail",
+			"item": [
+				{
+					"name": "Get User Detail",
+					"id": "d719c459-6560-4974-bdf6-3e6f506deab4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{host-url}}getUserDetail"
+					},
+					"response": []
+				},
+				{
+					"name": "Change 2FA Status",
+					"id": "02336732-ed06-4d05-87c3-bf398051567a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"DISABLE\" // ENABLE , DISABLE\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}change2FAStatus"
+					},
+					"response": [
+						{
+							"id": "ef95cd9c-15ba-449d-9630-213a402caf7f",
+							"name": "Change 2FA Status",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"ENABLE\" // ENABLE , DISABLE\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}change2FAStatus"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Jan 2025 13:19:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"2FA status changed successfully.\",\n    \"request_id\": \"524d07d9-a57b-4086-a583-76b9104d462f\",\n    \"data\": []\n}"
+						},
+						{
+							"id": "b5898f85-14b5-4725-b647-c0b1693a09c7",
+							"name": "Change 2FA status",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"DISABLE\" // ENABLE , DISABLE\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}change2FAStatus"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Jan 2025 13:28:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"OTP sent successfully\",\n    \"request_id\": \"c8f098d5-c532-4e54-91af-24c3c8b65817\",\n    \"data\": {\n        \"otp_reference\": \"180158786085462025\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Verify 2FA Change Status OTP",
+					"id": "17f2d528-bc44-49fe-9eea-f41b0a25de99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"DISABLE\",\r\n    \"otp_reference\":\"100150871621092025\",\r\n    \"otp\":\"281091\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}verify2FAStatusOtp"
+					},
+					"response": [
+						{
+							"id": "406536d3-cdfd-40db-81be-e4c066cd0aec",
+							"name": "Verify 2FA Change Status OTP",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"DISABLE\",\r\n    \"otp_reference\":\"100150871621092025\",\r\n    \"otp\":\"281091\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}verify2FAStatusOtp"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Jan 2025 05:20:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"2FA status changed successfully.\",\n    \"request_id\": \"1df62697-8985-42e1-ab13-de89ad156ea6\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			],
+			"id": "b217907f-a6e1-4c2d-b211-85aba1cf629b"
+		},
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Get Allowed Pages",
+					"id": "4984c091-2359-4fe5-aca7-40a61e76fa89",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiIwMzU3MzA0My00MjljLTRjYzEtYTE1Ny00YTdkMWQ1NzdiMmUiLCJ1aWQiOiJVU1IwMDAwMDEiLCJ1cnQiOiIyIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI1LTAxLTIwIDExOjQ5OjA5In0.KhnIl25_tJogzZSuJcPiwgd1AM3arAPDburrmk9qN5w"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{host-url}}getAllowedPages"
+					},
+					"response": [
+						{
+							"id": "da15d37e-cc5d-4bb4-b39a-3c99739eb68e",
+							"name": "Get Allowed Pages",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{host-url}}getAllowedPages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Jan 2025 12:21:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Detail fetched successfully.\",\n    \"request_id\": \"4dbbbb0e-e132-4c00-8cd8-1a3cff7814bb\",\n    \"data\": [\n        {\n            \"tab_id\": 1,\n            \"tab_name\": \"Dashboard\",\n            \"tab_icon\": null,\n            \"tab_class\": \"Dashboard\",\n            \"tab_order\": \"1\",\n            \"tab_url\": \"Dashboard\"\n        },\n        {\n            \"tab_id\": 2,\n            \"tab_name\": \"Profile\",\n            \"tab_icon\": null,\n            \"tab_class\": \"Profile\",\n            \"tab_order\": \"1\",\n            \"tab_url\": \"javascript:void(0)\",\n            \"child\": [\n                {\n                    \"tab_id\": 3,\n                    \"tab_name\": \"Account Details\",\n                    \"tab_icon\": null,\n                    \"tab_class\": \"Profile/AccountDetails\",\n                    \"tab_order\": \"1\",\n                    \"tab_url\": \"Profile/AccountDetails\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"id": "1866ea9d-1bc1-4ff1-8e92-91b741066429"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyaWQiOiIwMzU3MzA0My00MjljLTRjYzEtYTE1Ny00YTdkMWQ1NzdiMmUiLCJ1aWQiOiJVU1IwMDAwMDEiLCJ1cnQiOiIyIiwiaXAiOiIxMjcuMC4wLjEiLCJsb2dnZWRfaW5fYXQiOiIyMDI1LTAxLTIwIDExOjQ5OjA5In0.KhnIl25_tJogzZSuJcPiwgd1AM3arAPDburrmk9qN5w"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4157a7e4-33f8-4a80-978c-9048a29525cc",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5c428315-578d-414f-8ee8-c227a9a0e02d",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host-url",
+			"value": "http://127.0.0.1:8000/api/v1/",
+			"type": "string"
+		}
+	]
+}
