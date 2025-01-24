@@ -1140,14 +1140,30 @@
 					]
 				},
 				{
-					"name": "Update Profile Info",
+					"name": "Update User Profile Info",
 					"id": "f4f3ff86-a280-4314-8983-3cf21862d656",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ravi\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host-url}}updateUserDetail"
 					},
 					"response": []
 				}
