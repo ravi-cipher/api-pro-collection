@@ -1156,7 +1156,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ravi\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Ravi Verma\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1165,7 +1165,76 @@
 						},
 						"url": "{{host-url}}updateUserDetail"
 					},
-					"response": []
+					"response": [
+						{
+							"id": "e1cfc0b1-6188-42cf-9657-80f6a40cd306",
+							"name": "Update User Profile Info",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ravi\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host-url}}updateUserDetail"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.26"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 Jan 2025 08:10:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"resp_code\": \"RCS\",\n    \"resp_desc\": \"Details updated successfully.\",\n    \"request_id\": \"7d91d712-ce89-4a1a-badf-8b6aa04ec4da\",\n    \"data\": []\n}"
+						}
+					]
 				}
 			],
 			"id": "b217907f-a6e1-4c2d-b211-85aba1cf629b"
@@ -1254,6 +1323,11 @@
 				}
 			],
 			"id": "1866ea9d-1bc1-4ff1-8e92-91b741066429"
+		},
+		{
+			"name": "Admin",
+			"item": [],
+			"id": "43bb7fd0-a6f9-4342-a1db-0e03efba1e38"
 		}
 	],
 	"auth": {
