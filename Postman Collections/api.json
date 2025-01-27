@@ -1531,8 +1531,27 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "••••••"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":\"USR000002\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{admin-host}}updateUserDetail"
 							},
 							"response": []
 						}
