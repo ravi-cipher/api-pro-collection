@@ -1554,6 +1554,34 @@
 								"url": "{{admin-host}}updateUserDetail"
 							},
 							"response": []
+						},
+						{
+							"name": "Add User Detail",
+							"id": "96acb308-b169-4858-8fe9-4c239c767155",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"name\": \"Ravi\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{admin-host}}addUserDetail"
+							},
+							"response": []
 						}
 					],
 					"id": "c46db80e-5d45-4f59-ba2b-7f2f9e8fce9a"
