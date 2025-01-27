@@ -1583,7 +1583,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4157a7e4-33f8-4a80-978c-9048a29525cc",
+				"id": "a1322828-8a26-4d75-a002-146b97ba6d9e",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1594,7 +1594,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "5c428315-578d-414f-8ee8-c227a9a0e02d",
+				"id": "213bf2d7-1549-4cc7-aa90-e6abccd90917",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1607,6 +1607,11 @@
 		{
 			"key": "host-url",
 			"value": "http://127.0.0.1:8000/api/v1/",
+			"type": "string"
+		},
+		{
+			"key": "admin-host",
+			"value": "http://127.0.0.1:8000/api/v1/admin/",
 			"type": "string"
 		}
 	]
