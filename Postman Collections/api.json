@@ -1544,7 +1544,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"user_id\":\"USR000002\"\n}",
+									"raw": "{\n    \"request_type\":\"BASIC_DETAIL\",\n    \"user_id\": \"USR000002\",\n    \"name\": \"Ravi\",\n    \"gender\": \"MALE\",\n    \"dob\": \"2012-12-04\",\n    \"city\": \"goa\",\n    \"state\": \"goa\",\n    \"country\": \"India\",\n    \"address\": \"New Delhi , India\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
