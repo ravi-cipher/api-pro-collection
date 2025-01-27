@@ -1590,6 +1590,25 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "060630f6-d719-4ae0-8532-2ff2fbaf902a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host-url}}test"
+					},
+					"response": []
+				}
+			],
+			"id": "0c95f0c7-2e84-4ff1-b39a-2f177fb2e4d9"
 		}
 	],
 	"auth": {
