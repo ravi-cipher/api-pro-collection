@@ -1572,7 +1572,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{   \r\n    \"name\": \"Ravi\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
+									"raw": "{\r\n    \"name\": \"Ravi\",\r\n    \"email\": \"user@email.com\",\r\n    \"mobile\": \"9876543213\",\r\n    \"role_id\": \"1\",\r\n    \"gender\": \"MALE\",\r\n    \"dob\": \"2012-12-04\",\r\n    \"city\": \"goa\",\r\n    \"state\": \"goa\",\r\n    \"country\": \"India\",\r\n    \"address\": \"New Delhi , India\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
